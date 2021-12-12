@@ -8,14 +8,17 @@ import Pagination from '../components/Pagination/Pagination';
 import Search from '../components/Search/Search';
 
 
-const CharactersPage = ({props}) => {
+const CharactersPage = () => {
   const [fetchedData, updateFetchedData] = useState([]);
   const [isError, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [pageNumber, setPageNumber] = useState(1);
   const [charSearch, setCharSearch] = useState('');
+  const [status, setStatus] = useState('');
+  const [gender, setGender] = useState('');
+  const [species, setSpecies] = useState('');
   
-  let url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${charSearch}`;
+  let url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${charSearch}&status=${status}&species=${species}&gender=${gender}`;
   
 
   let { info, results } = fetchedData;
@@ -51,7 +54,11 @@ const CharactersPage = ({props}) => {
         </div>
         <div className="row">
           
-            <Filters />
+            <Filters 
+              
+              setStatus={setStatus}
+              setPageNumber={setPageNumber}
+            />
             {/* <Card characters={fetchedData} /> */}
           
           <div className="col-md-8">
