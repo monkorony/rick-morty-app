@@ -50,10 +50,10 @@ const CharactersPage = ({props}) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4">
+          
             <Filters />
             {/* <Card characters={fetchedData} /> */}
-          </div>
+          
           <div className="col-md-8">
             {isLoading && isError ? 'Error: No characters found' : (
               <div className='card-grid'>
@@ -63,6 +63,7 @@ const CharactersPage = ({props}) => {
             <Pagination 
               setPageNumber={setPageNumber} 
               pageNumber={pageNumber}
+              info={info}
             />
           </div>
         </div>
