@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Nav from '../components/Nav';
+import Nav from '../components/Nav/Nav';
 import Card from '../components/Cards/Card';
 import CardGrid from '../components/Cards/CardsGrid';
 import axios from 'axios';
@@ -8,7 +8,7 @@ import Pagination from '../components/Pagination/Pagination';
 import Search from '../components/Search/Search';
 
 
-const CharactersPage = () => {
+const Characters = () => {
   const [fetchedData, updateFetchedData] = useState([]);
   const [isError, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -41,7 +41,6 @@ const CharactersPage = () => {
   }, [url]);
   return (
     <div>
-      <Nav />
       <div className="container">
         <div className='row'>
           <div>
@@ -79,4 +78,4 @@ const CharactersPage = () => {
   )
 }
 
-export default CharactersPage
+export default Characters

@@ -15,6 +15,7 @@ const Filters = ({
     setGender('');
     setStatus('');
     setPageNumber(1);
+    window.location.reload(false)
   }
   return (
     <div className='col-md-4'>
