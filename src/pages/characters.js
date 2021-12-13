@@ -53,10 +53,10 @@ const CharactersPage = () => {
           </div>
         </div>
         <div className="row">
-          
             <Filters 
-              
+              setSpecies={setSpecies}
               setStatus={setStatus}
+              setGender={setGender}
               setPageNumber={setPageNumber}
             />
             {/* <Card characters={fetchedData} /> */}

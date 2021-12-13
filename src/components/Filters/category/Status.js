@@ -2,7 +2,6 @@ import React from 'react'
 import FilterBtn from '../FilterBtn';
 
 const Status = ({
-  currentStatus,
   setStatus,
   setPageNumber
 }) => {
