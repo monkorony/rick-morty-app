@@ -18,14 +18,14 @@ const Filters = ({
     window.location.reload(false)
   }
   return (
-    <div className='col-md-4'>
+    <>
       <div className="text-center fw-bold fs-4 mb-2">
         Filter
       </div>
       <div 
       onClick={clearFilter}
-      style={{cursor: 'pointer'}} 
-      className='text-center text-primary'>
+      style={{cursor: 'pointer', textDecoration: 'underline'}} 
+      className='text-center text-primary mb-4'>
         Clear Filters
       </div>
       <div className="accordion" id="accordionExample">
@@ -42,7 +42,7 @@ const Filters = ({
           setPageNumber={setPageNumber}
         />
       </div>
-    </div>
+    </>
   )
 }
 

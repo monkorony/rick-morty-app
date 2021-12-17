@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 const CardsGrid = ({results, isError}) => {
-  console.log(results, 'results grid')
+  //console.log(results, 'results grid')
   let displayGrid;
 
   if (results && !isError) {

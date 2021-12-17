@@ -4,9 +4,9 @@ const Card = ({character}) => {
   const { id, status, url, name, species, image } = character;
   let badgeStatus = 'info';
 
-  if (status.toLowerCase() === 'dead') {
+  if (status === 'Dead') {
     badgeStatus = 'secondary'
-  } else if (status.toLowerCase() === 'alive') {
+  } else if (status === 'Alive') {
     badgeStatus = 'success'
   } 
   return (
@@ -16,7 +16,7 @@ const Card = ({character}) => {
         <div>
           <span className={`badge bg-${badgeStatus}`}>{status}</span>
         </div>
-        <h2>{name}</h2>
+        <h4>{name}</h4>
         <p>{species}</p>
         <a className="btn btn-primary" href={url}>
           Info

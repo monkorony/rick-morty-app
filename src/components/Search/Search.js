@@ -11,16 +11,16 @@ const Search = ({charSearch, setCharSearch, setPageNumber}) => {
     e.preventDefault();
   }
   return (
-    <div>
+    <div className="mb-3">
       <form >
         <input 
           onChange={handleChange} 
           type='text' 
-          placeholder='search for a character'
+          placeholder='Search for a character'
           value={charSearch} 
-
+          className="form-control"
         />
-        <button onClick={seachButton} className='btn btn-primary'>Search</button>
+        <button onClick={seachButton} className='btn btn-primary my-2'>Search</button>
       </form>
     </div>
   )

@@ -41,24 +41,30 @@ const Characters = () => {
   }, [url]);
   return (
     <div>
-      <div className="container">
+      <div className="container m-4">
         <div className='row'>
-          <div>
+          <div className='col-md-12'>
+            <div className='text-center m-4'>
+              <h2>Characters</h2>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className='col-md-4'>
             <Search 
               charSearch={charSearch} 
               setCharSearch={setCharSearch}
               setPageNumber={setPageNumber}
             />
-          </div>
-        </div>
-        <div className="row">
             <Filters 
               setSpecies={setSpecies}
               setStatus={setStatus}
               setGender={setGender}
               setPageNumber={setPageNumber}
             />
-            {/* <Card characters={fetchedData} /> */}
+          </div>
+          
+          {/* <Card characters={fetchedData} /> */}
           
           <div className="col-md-8">
             {isLoading && isError ? 'Error: No characters found' : (
