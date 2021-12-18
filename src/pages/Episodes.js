@@ -5,7 +5,8 @@ import Dropdown from '../components/Filters/category/Dropdown'
 
 const Episodes = () => {
   const BASE_URL = 'https://rickandmortyapi.com/api/episode/';
-  const { isError, data, results, setPageNum} = useFetch(BASE_URL);
+  const num = 1;
+  const { isError, data, results, setPageNum} = useFetch(BASE_URL, num);
   
   //console.log(data);
   
@@ -27,7 +28,7 @@ const Episodes = () => {
                 <p>Aired - {data.air_date}</p>
               </div>
               <div className='card-grid'>
-                <CardsGrid results={results} isError={isError}/>
+                <CardsGrid page='/episodes/' results={results} isError={isError}/>
               </div>
             </>
           )}

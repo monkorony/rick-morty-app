@@ -26,7 +26,7 @@ const Location = () => {
                 <p>Dimension - {data.dimension}</p>
               </div>
               <div className='card-grid'>
-                <CardsGrid results={results} isError={isError}/>
+                <CardsGrid page='/location/' results={results} isError={isError}/>
               </div>
             </>
           )}

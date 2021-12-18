@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useFetch = (url) => {
+const useFetch = (url, pageNumber) => {
   const [isError, setError] = useState(false);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const [data, setdata] = useState(null);
   const [pageNum, setPageNum] = useState(1);
   const [results, setResults] = useState(null);
 
+
   //Get episode from api and update state
   const fetchData = async (url) => {
     try {
-      setLoading(true);
-      const { data }  = await axios.get(`${url}${pageNum}`);
+      const { data }  = await axios.get(`${url}/${pageNum}`);
       if (!data) return;        
       setdata(data);
+      setLoading(false);
       let listInfo;
 
       for (let key in data) {

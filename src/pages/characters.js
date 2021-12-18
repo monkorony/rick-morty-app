@@ -69,7 +69,7 @@ const Characters = () => {
           <div className="col-md-8">
             {isLoading && isError ? 'Error: No characters found' : (
               <div className='card-grid'>
-                <CardGrid results={results} isError={isError}/>
+                <CardGrid page='/' results={results} isError={isError}/>
               </div>
             )}
             <Pagination 
