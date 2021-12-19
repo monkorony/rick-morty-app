@@ -9,7 +9,7 @@ const CardDetails = () => {
   const [data, setData] = useState();
   const [isError, setError] = useState(false);
   const [isLoading, setLoading] = useState(true);
-  const BASE_URL = `https://rickandmortyapi.com/api/characer/${id}`;
+  const BASE_URL = `https://rickandmortyapi.com/api/character/${id}`;
   //const { isError, data, results, isLoading, setPageNum } = useFetch(BASE_URL);
   
   const fetchData = async () => {
