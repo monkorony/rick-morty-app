@@ -5,10 +5,7 @@ import Dropdown from '../components/Filters/category/Dropdown'
 
 const Episodes = () => {
   const BASE_URL = 'https://rickandmortyapi.com/api/episode/';
-  const num = 1;
-  const { isError, data, results, setPageNum} = useFetch(BASE_URL, num);
-  
-  //console.log(data);
+  const { isError, data, results, setPageNum} = useFetch(BASE_URL);
   
   return (
     <div className="container">
