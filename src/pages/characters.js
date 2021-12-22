@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Nav from '../components/Nav/Nav';
-import Card from '../components/Cards/Card';
 import CardGrid from '../components/Cards/CardsGrid';
+import CardGridLayout from '../components/Cards/CardGridLayout';
 import axios from 'axios';
 import Filters from '../components/Filters/Filters';
 import Pagination from '../components/Pagination/Pagination';
 import Search from '../components/Search/Search';
+import Loader from '../components/Loader/Loader';
+import Error from '../components/Error/Error';
 
 
 const Characters = () => {
@@ -41,7 +42,7 @@ const Characters = () => {
   }, [url]);
   return (
     <div>
-      <div className="container m-4">
+      <div className="container">
         <div className='row'>
           <div className='col-md-12'>
             <div className='text-center m-4'>
@@ -67,7 +68,9 @@ const Characters = () => {
           {/* <Card characters={fetchedData} /> */}
           
           <div className="col-md-8">
-            {isLoading && isError ? 'Error: No characters found' : (
+            { isError &&  <Error /> }
+            { isLoading && <Loader /> }
+            { results && (
               <div className='card-grid'>
                 <CardGrid page='/' results={results} isError={isError}/>
               </div>

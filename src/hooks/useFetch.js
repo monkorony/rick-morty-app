@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useFetch = (url, pageNumber) => {
+const useFetch = (url, number) => {
   const [isError, setError] = useState(false);
   const [isLoading, setLoading] = useState(true);
   const [data, setdata] = useState(null);
-  const [pageNum, setPageNum] = useState(1);
+  const [pageNum, setPageNum] = useState("");
   const [results, setResults] = useState(null);
 
-
   //Get episode from api and update state
-  const fetchData = async (url) => {
+  const fetchData = async () => {
     try {
+      setPageNum(number);
       const { data }  = await axios.get(`${url}/${pageNum}`);
       if (!data) return;        
       setdata(data);
@@ -33,7 +33,6 @@ const useFetch = (url, pageNumber) => {
           );
         }
       }
-
       setResults(listInfo);
     } catch (e) {
       setError(true);

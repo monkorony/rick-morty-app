@@ -1,11 +1,15 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 import CardsGrid from '../components/Cards/CardsGrid';
-import Dropdown from '../components/Filters/category/Dropdown'
+import Dropdown from '../components/Filters/category/Dropdown';
+import Loader from '../components/Loader/Loader';
+import Error from '../components/Error/Error';
+import CardGridLayout from '../components/Cards/CardGridLayout';
 
 const Location = () => {
   const BASE_URL = 'https://rickandmortyapi.com/api/location/';
-  const { isError, data, results, setPageNum} = useFetch(BASE_URL);
+  const number = 1;
+  const { isError, data, results, isLoading, setPageNum} = useFetch(BASE_URL, number);
 
   return (
     <div>
@@ -18,18 +22,9 @@ const Location = () => {
             </div>
           </div>
           <div className='col-md-8'>
-          {!data ? 'Error: None found' : (
-            <>
-              <div className='episode-title-container text-center'>
-                <h2>{data.name}</h2>
-                <h4>Type: {data.type}</h4>
-                <p>Dimension - {data.dimension}</p>
-              </div>
-              <div className='card-grid'>
-                <CardsGrid page='/location/' results={results} isError={isError}/>
-              </div>
-            </>
-          )}
+            { isError &&  <Error /> }
+            { isLoading && <Loader /> }
+            {data && results && <CardGridLayout data={data} results={results} /> }
           </div>
         </div>
     </div>
