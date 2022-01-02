@@ -15,8 +15,8 @@ const Pagination = ({setPageNumber, pageNumber, info}) => {
     nextLabel="Next"
     forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
     previousLabel="Prev"
-    previousClassName="btn btn-secondary"
-    nextClassName="btn btn-secondary"
+    previousClassName="btn btn-light"
+    nextClassName="btn btn-light"
     pageCount={info?.pages}
     pageClassName="page-item"
     pageLinkClassName="page-link"

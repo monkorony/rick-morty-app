@@ -2,3 +2,12 @@
   text-decoration: none;
   color: #444;
 }
+.nav__link {
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .nav__wrap {
+    justify-content: center !important;
+  }
+}

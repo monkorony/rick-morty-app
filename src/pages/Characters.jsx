@@ -7,6 +7,7 @@ import Pagination from '../components/Pagination/Pagination';
 import Search from '../components/Search/Search';
 import Loader from '../components/Loader/Loader';
 import Error from '../components/Error/Error';
+import CardGridLayout from '../components/Cards/CardGridLayout/CardGridLayout';
 
 
 const Characters = () => {
@@ -71,9 +72,7 @@ const Characters = () => {
             { isError &&  <Error /> }
             { isLoading && <Loader /> }
             { results && (
-              
-              <CardGrid page='/' results={results} isError={isError}/>
-              
+              <CardGridLayout results={results} />
             )}
             <Pagination 
               setPageNumber={setPageNumber} 

@@ -6,3 +6,6 @@
   --light-blue: #56cefd;
   --white: #fff;
 }
+.nav-link.active {
+  color: #444;
+}

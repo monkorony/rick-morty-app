@@ -2,7 +2,7 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div>
+    <div className='text-center'>
        <svg
             version="1.1"
             id="Layer_1"
