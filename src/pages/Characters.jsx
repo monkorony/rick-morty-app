@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardGrid from '../components/Cards/CardsGrid';
-import CardGridLayout from '../components/Cards/CardGridLayout';
+//import CardGridLayout from '../components/Cards/CardGridLayout/CardGridLayout';
 import axios from 'axios';
 import Filters from '../components/Filters/Filters';
 import Pagination from '../components/Pagination/Pagination';
@@ -71,9 +71,9 @@ const Characters = () => {
             { isError &&  <Error /> }
             { isLoading && <Loader /> }
             { results && (
-              <div className='card-grid'>
-                <CardGrid page='/' results={results} isError={isError}/>
-              </div>
+              
+              <CardGrid page='/' results={results} isError={isError}/>
+              
             )}
             <Pagination 
               setPageNumber={setPageNumber} 
