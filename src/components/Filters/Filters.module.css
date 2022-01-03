@@ -1,0 +1,10 @@
+@import "../../styles/global.css";
+
+.filter__link {
+  color: var(--blue);
+}
+.filter__text_layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

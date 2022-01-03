@@ -31,6 +31,7 @@ const Characters = () => {
         const res = await axios.get(url);
         //console.log(res, 'data');
         updateFetchedData(res.data);
+        setError(false);
         setIsLoading(false);
       } catch (e) {
         console.log(e)

@@ -1,3 +1,5 @@
+@import "./styles/global.css";
+
 .fa-bars:before {
   content: "\f0c9";
 }
@@ -6,4 +8,33 @@
 }
 body a {
   text-decoration: none;
+}
+
+/* Accordion Filters */
+
+body .accordion-button:not(.collapsed) {
+  background-color: var(--muted-green);
+  color: var(--dark-green);
+  box-shadow: none;
+}
+body .accordion-button:focus {
+  box-shadow: none;
+}
+body .accordion-item:first-of-type {
+  border-radius: 0;
+}
+
+body .accordion-item:last-of-type {
+  border-radius: 0;
+}
+
+body .btn-outline-primary {
+  color: var(--bright-green);
+  border-color: var(--bright-green);
+}
+body .btn-outline-primary:hover,
+body .x:checked + label {
+  color: var(--white);
+  background-color: var(--bright-green);
+  border-color: var(--bright-green);
 }

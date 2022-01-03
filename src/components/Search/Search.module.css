@@ -1,0 +1,8 @@
+@import "../../styles/global.css";
+
+.btn__main,
+.btn__main:hover {
+  background-color: var(--bright-green);
+  border: 1px solid var(--bright-green);
+  color: var(--dark-green);
+}

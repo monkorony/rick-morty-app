@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import styles from './Search.module.css';
 
 const Search = ({charSearch, setCharSearch, setPageNumber}) => {
 
@@ -20,7 +21,7 @@ const Search = ({charSearch, setCharSearch, setPageNumber}) => {
           value={charSearch} 
           className="form-control"
         />
-        <button onClick={seachButton} className='btn btn-primary my-2'>Search</button>
+        <button onClick={seachButton} className={`${styles.btn__main} btn btn-primary my-2`}>Search</button>
       </form>
     </div>
   )
