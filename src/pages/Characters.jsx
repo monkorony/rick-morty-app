@@ -71,14 +71,14 @@ const Characters = () => {
           <div className="col-md-8">
             { isError &&  <Error /> }
             { isLoading && <Loader /> }
-            { results && (
-              <CardGridLayout results={results} />
-            )}
-            <Pagination 
-              setPageNumber={setPageNumber} 
-              pageNumber={pageNumber}
-              info={info}
-            />
+            { results && !isError && <CardGridLayout results={results} /> }
+            { results && !isError && 
+              <Pagination 
+                setPageNumber={setPageNumber} 
+                pageNumber={pageNumber}
+                info={info}
+              />
+            }
           </div>
         </div>
       </div>
