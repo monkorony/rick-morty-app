@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from './Card/Card';
 
 const CardsGrid = ({results, page}) => {
   //console.log(results, 'results grid')

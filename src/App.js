@@ -6,7 +6,7 @@ import Nav from './components/Nav/Nav';
 import Episodes from './pages/Episodes';
 import Location from './pages/Location';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import CardDetails from './components/Cards/CardDetails';
+import CardDetails from './components/Cards/CardDetails/CardDetails';
 
 function App() {
   return (

@@ -1,0 +1,18 @@
+@import "../../../styles/global.css";
+
+.status__bg {
+  border: 0;
+  border-radius: 0 !important;
+  color: var(--white);
+}
+.card__wrap {
+  color: var(--dark-green);
+  border: 0;
+  border-radius: 0;
+}
+body .card-img-top {
+  border: 0;
+}
+.card__img {
+  border-radius: 0;
+}

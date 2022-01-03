@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Card.module.css'
 
 const Card = ({character, page}) => {
   const { id, status, url, name, species, image } = character;
@@ -12,17 +13,14 @@ const Card = ({character, page}) => {
   } 
   return (
     <Link style={{textDecoration : 'none', color: 'unset'}} to={`${page}${id}`}>
-      <div className="card" key={id}>
-        <img src={image} className="card-img-top" alt={name} />
+      <div className={`card ${styles.card__wrap}`} key={id}>
+        <img src={image} className={`card-img-top ${styles.card__img}`} alt={name} />
         <div className="card-body">
           <h4>{name}</h4>
           <p>Species - {species}</p>
-          <a className="btn btn-primary" href={url}>
-            Details
-          </a>
         </div>
-        <div className={`card-footer bg-${badgeStatus}`}>
-          <small style={{color: 'white'}}>{status}</small>
+        <div className={`card-footer bg-${badgeStatus} ${styles.status__bg}`}>
+          <small style={{color: 'white'}}>Status - {status}</small>
         </div>
       </div>
     </Link>
