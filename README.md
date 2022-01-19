@@ -1,6 +1,8 @@
 # Rick and Morty API
 
-This app gives user the ability to search for characters, episodes and location information on the popular series Rick and Morty
+This app gives user the ability to search for characters, episodes and location information on the popular series Rick and Morty.
+
+Live preview - [https://naughty-bhaskara-b7aa02.netlify.app/](https://naughty-bhaskara-b7aa02.netlify.app/)
 
 ## Preview
 
