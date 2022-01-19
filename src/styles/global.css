@@ -32,3 +32,13 @@ h6 {
   font-weight: 600;
   font-family: var(--font-family-hdr);
 }
+.accordion {
+  margin-bottom: 30px;
+}
+body .bg-light {
+  background-color: var(--muted-green) !important;
+}
+body .nav-link.active,
+body .nav-link:hover {
+  color: var(--bright-green);
+}

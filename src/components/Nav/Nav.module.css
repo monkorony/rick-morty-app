@@ -1,9 +1,9 @@
 .navBrand a {
   text-decoration: none;
-  color: #444;
+  color: #fff;
 }
 .nav__link {
-  color: #000;
+  color: #fff;
 }
 
 @media (max-width: 767px) {

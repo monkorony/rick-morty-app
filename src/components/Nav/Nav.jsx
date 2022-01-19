@@ -1,14 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styles from './Nav.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./Nav.module.css";
 
 const Nav = () => (
   <nav className={`navbar navbar-expand-lg navbar-light bg-light`}>
     <div className={`${styles.nav__wrap} container-fluid`}>
       <div className={`${styles.navBrand} navbar-brand`}>
-        <NavLink to="/">
-          Wubba wubba lub dub!
-        </NavLink>
+        <NavLink to="/">Wubba wubba lub dub!</NavLink>
       </div>
       <ul className="nav">
         <li className="nav-item">
